@@ -4,6 +4,9 @@ import Features from "./Features/Features";
 import Footer from "./Footer/Footer";
 import SignInForm from "./SignInForm/SignInForm";
 import SignUpForm from "./SignUpForm/SignUpForm";
+import PageHead from "./PageHead/PageHead";
+import SideNav from './SideNav/SideNav';
+import Nav from './Nav/Nav';
 
 
 export {
@@ -12,5 +15,8 @@ export {
     Features,
     Footer,
     SignInForm,
-    SignUpForm
+    SignUpForm,
+    PageHead,
+    SideNav,
+    Nav
 }

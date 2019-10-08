@@ -1,9 +1,10 @@
 import Landing from "./Landing/Landing";
 import SignIn from "./SignIn/SignIn";
-import SignUp from "./SignUp/SignUp";
+import Dashboard from "./Dashboard/Dashboard";
+// import SignUp from "./SignUp/SignUp";
 
 export {
     Landing,
     SignIn,
-    SignUp
+    Dashboard
 }

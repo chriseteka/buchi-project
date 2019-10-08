@@ -1,16 +1,16 @@
 import React from 'react';
-import {SignUp} from "./pages";
+import {SignIn, Landing, Dashboard
+  } from "./pages";
+import { Switch, Route } from 'react-router-dom';
 
 
 function App() {
   return (
-    <div className="App">
-      <SignUp />
-      {/* <SignIn /> */}
-      {/* <Landing /> */}
-      {/* <Banner /> */}
-    </div>
+    <Switch>
+      <Route exact path="/login" component={SignIn} />
+      <Route exact path="/" component={Landing} />
+      <Route exact path="/dashboard" component={Dashboard} />
+    </Switch>
   );
 }
-
 export default App;
