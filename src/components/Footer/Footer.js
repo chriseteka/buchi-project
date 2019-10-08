@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Footer(props){
-    return <footer className="footer-area section-padding">
+    return <footer className="footer-area " style={{padding: 50}}>
     <div className="footer-widget">
         <div className="container">
             <div className="row">
@@ -39,28 +39,6 @@ export default function Footer(props){
                             <img src="assets/images/feed7.jpg" alt="feed" />
                             <img src="assets/images/feed8.jpg" alt="feed" />
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div className="footer-copyright">
-        <div className="container">
-            <div className="row">
-                <div className="col-lg-8 col-md-6">
-                    <span>
-Copyright &copy; All rights reserved | This template is made with <i className="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-{/* <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> */}
-</span>
-                </div>
-                <div className="col-lg-4 col-md-6">
-                    <div className="social-icons">
-                        <ul>
-                            <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i className="fa fa-dribbble"></i></a></li>
-                            <li><a href="#"><i className="fa fa-behance"></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </div>

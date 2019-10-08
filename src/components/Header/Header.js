@@ -13,7 +13,7 @@ export default function Header(){
                 <ul className="nav-menu">
                     <li className="menu-active"><Link to="/">Home</Link></li>
                     <li><Link to="/login">Login</Link></li>
-                    <li><Link to="/contact">Contact Us</Link></li>
+                    <li><Link to="#">Contact Us</Link></li>
                     {/* <li className="menu-has-children"><Link to="">Pages</Link>
                         <ul>
                             <li><Link to="about.html">about us</Link></li>
