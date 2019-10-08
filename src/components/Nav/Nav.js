@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function Nav() {
     return (
@@ -7,26 +8,26 @@ export default function Nav() {
     <button type="button" className="navbar-toggler mr-2 " data-toggle="offcanvas" title="Toggle responsive left sidebar">
       <span className="navbar-toggler-icon" />
     </button>
-    <a className="navbar-brand" href="#" title="Free Bootstrap 4 Admin Template">Admin Template</a>
+    <Link className="navbar-brand" to="#" title="Free Bootstrap 4 Admin Template">Medino</Link>
   </div>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
     <span className="navbar-toggler-icon" />
   </button>
   <div className="navbar-collapse collapse" id="collapsingNavbar">
-    <ul className="navbar-nav">
+    {/* <ul className="navbar-nav">
       <li className="nav-item active">
-        <a className="nav-link" href="#">Home <span className="sr-only">Home</span></a>
+        <Link className="nav-link" to="#">Home <span className="sr-only">Home</span></Link>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="//www.codeply.com">Link</a>
+        <Link className="nav-link" to="//www.codeply.com">Link</Link>
       </li>
-    </ul>
+    </ul> */}
     <ul className="navbar-nav ml-auto">
+      {/* <li className="nav-item">
+        <Link className="nav-link" to="#myAlert" data-toggle="collapse">Alert</Link>
+      </li> */}
       <li className="nav-item">
-        <a className="nav-link" href="#myAlert" data-toggle="collapse">Alert</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href data-target="#myModal" data-toggle="modal">About</a>
+        <Link className="nav-link" to="/login">Logout</Link>
       </li>
     </ul>
   </div>
