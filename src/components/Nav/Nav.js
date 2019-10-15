@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { logout } from '../../actions/auth';
 
-export default function Nav() {
+function Nav(props) {
     return (
         <nav className="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">
   <div className="flex-row d-flex">
@@ -27,10 +29,12 @@ export default function Nav() {
         <Link className="nav-link" to="#myAlert" data-toggle="collapse">Alert</Link>
       </li> */}
       <li className="nav-item">
-        <Link className="nav-link" to="/login">Logout</Link>
+        <a onClick={() => props.logout()} className="nav-link" href="/login">Logout</a>
       </li>
     </ul>
   </div>
 </nav>
     )
 }
+
+export default connect(null, {logout})(Nav);

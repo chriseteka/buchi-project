@@ -2,14 +2,17 @@ import React from 'react';
 import {SignIn, Landing, Dashboard, AddNewAdmin, AddHosAttendant, AddStudent, AllStudent, AllAdmin, AllHosAttendant, VerifyStudent
   } from "./pages";
 import { Switch, Route } from 'react-router-dom';
+import { UserRoute, GuestRoute } from './Route/index';
+import { connect } from 'react-redux';
 
 
-function App() {
+function App(props) {
+  console.log(props.isAuthenticated)
   return (
     <Switch>
-      <Route exact path="/login" component={SignIn} />
+      <GuestRoute exact path="/login" component={SignIn}  isAuthenticated={props.isAuthenticated}/>
       <Route exact path="/" component={Landing} />
-      <Route exact path="/dashboard" component={Dashboard} />
+      <UserRoute exact path="/dashboard" component={Dashboard} isAuthenticated={props.isAuthenticated}/>
       <Route exact path="/addadmin" component={AddNewAdmin} />
       <Route exact path="/addattendant" component={AddHosAttendant} />
       <Route exact path="/addstudent" component={AddStudent} />
@@ -20,4 +23,8 @@ function App() {
     </Switch>
   );
 }
-export default App;
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.user.isAuthenticated
+})
+export default connect(mapStateToProps)(App);

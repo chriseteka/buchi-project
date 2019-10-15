@@ -1,9 +1,9 @@
 import React from 'react';
 import { SideNav, Nav } from '../../components'
+import { connect } from 'react-redux';
 
-const admin = false;
 
-export default function Dashboard() {
+function Dashboard(props) {
     return ( 
         <div>
            <Nav />
@@ -24,7 +24,7 @@ export default function Dashboard() {
         <strong>Holy guacamole!</strong> It's free.. this is an example theme.
       </div> */}
      <div className="row mb-3">
-     {admin && 
+     {props.user.roles.name === "ADMIN" && 
         <div className="col-xl-4 col-sm-6 py-2">
           <div className="card bg-success text-white h-100">
             <div className="card-body bg-success">
@@ -81,3 +81,9 @@ export default function Dashboard() {
 
         </div>)
   }
+
+  
+const mapProps = state => ({
+  user: state.user.user
+})
+export default connect(mapProps)(Dashboard)
